@@ -1,10 +1,6 @@
 import rospy
 from common_msgs.msg import Random
 
-
-
-
-
 def callback(msg):
     print ("subscribe:", msg.pose.x, msg.pose.y, msg.pose.z)
 
