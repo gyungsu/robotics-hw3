@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import rospy
 from common_msgs.msg import Random
 
