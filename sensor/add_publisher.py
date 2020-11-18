@@ -17,8 +17,8 @@ while not rospy.is_shutdown():
     print("Time : ", msg.timestamp.secs%100)
     print("x + y = z")
     print(msg.pose.x, end = "")
-    print("+", msg.pose.y, end = "")
-    print("=", msg.pose.z)
+    print(" +", msg.pose.y, end = "")
+    print(" =", msg.pose.z)
     pub.publish(msg)
     rate.sleep()
 
