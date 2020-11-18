@@ -19,7 +19,7 @@ while not rospy.is_shutdown():
     print("+", msg.pose.y, end = "")
     print("=", msg.pose.z)
     pub.publish(msg)
-    rate.sleep()0
+    rate.sleep()
 
 
 
