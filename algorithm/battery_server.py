@@ -3,8 +3,8 @@ import rospy
 from common_msgs.srv import BATTERY, BATTERYResponse
 
 def service_callback(request):
-    response = BATTERYResponse(battery=request.total - request.use)
-    print ("request data:", request.total, request.use, ", response:", response.battery)
+    response = BATTERYResponse(battery=request.total)
+    print ("TOTAL:", request.total,"% USE:", request.use, "% BATTERY:", response.battery,"%")
     return response
 
 rospy.init_node('battery_server')
