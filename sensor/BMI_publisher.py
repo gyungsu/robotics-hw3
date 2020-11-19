@@ -6,7 +6,7 @@ from common.msgs.srv import BMI, BMIRequest
 rospy.init_node('BMI_publisher')
 rospy.wait_for_service('bmi')
 requester = rospy.ServiceProxy('bmi', BMI)
-print "requester type:", type(requester), ", callable?", callable(requester)
+print ("requester type:", type(requester), ", callable?", callable(requester))
 rate = rospy.Rate(10)
 count = 0
 while count < 100:
