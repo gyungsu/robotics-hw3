@@ -7,6 +7,6 @@ def service_callback(request):
     print ("request data:", request.weight, request.height, ", response:", response.bmi)
     return response
 
-rospy.init_node('BMI_subscriber')
+rospy.init_node('BMI_server')
 service = rospy.Service('bmi', BMI, service_callback)
 rospy.spin()
