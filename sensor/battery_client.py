@@ -9,9 +9,10 @@ requester = rospy.ServiceProxy('battery', BATTERY)
 print ("requester type:", type(requester), ", callable?", callable(requester))
 rate = rospy.Rate(10)
 count = 0
+req = BATTERYRequest(total = 100)
 while count < 100:
     if count % 10 == 0:
-        req = BATTERYRequest(total = 100, use = random.randint(5,15))
+        req = BATTERYRequest(use = random.randint(5,15))
         res = requester(req)
         print (count, "request:", req.total, req.use, "response:", res.battery)
     rate.sleep()
