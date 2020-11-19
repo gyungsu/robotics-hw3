@@ -13,7 +13,7 @@ full = 100
 while count < 100:
     if count % 10 == 0:
         random = random.randint(5,15)
-        req = BATTERYRequest(total = full - random, random = random)
+        req = BATTERYRequest(total = full - random, use = random)
         res = requester(req)
         print (count, "request:", req.total, req.use, "response:", res.battery)
     rate.sleep()
