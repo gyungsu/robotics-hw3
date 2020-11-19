@@ -11,7 +11,7 @@ rate = rospy.Rate(10)
 count = 0
 while count < 100:
     if count % 10 == 0:
-        req = BMIRequest(weight = random.randint(50,130), height = random.randint(150,190))
+        req = BMIRequest(weight = (int)(random.randint(50,130)/100), height = (int)(random.randint(150,190)/100))
         res = requester(req)
         print (count, "request:", req.weight, req.height, "response:", res.bmi)
     rate.sleep()
