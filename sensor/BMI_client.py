@@ -3,7 +3,7 @@ import rospy
 import random
 from common_msgs.srv import BMI, BMIRequest
 
-rospy.init_node('BMI_publisher')
+rospy.init_node('BMI_client')
 rospy.wait_for_service('bmi')
 requester = rospy.ServiceProxy('bmi', BMI)
 print ("requester type:", type(requester), ", callable?", callable(requester))
