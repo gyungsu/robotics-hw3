@@ -1,0 +1,4 @@
+int32 weight
+int32 height
+---
+int32 bmi
