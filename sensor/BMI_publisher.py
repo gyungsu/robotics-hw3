@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import rospy
 import random
-from common.msgs.srv import BMI, BMIRequest
+from common_msgs.srv import BMI, BMIRequest
 
 rospy.init_node('BMI_publisher')
 rospy.wait_for_service('bmi')
