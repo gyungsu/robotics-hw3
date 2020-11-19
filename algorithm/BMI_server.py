@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 import rospy
-from common_msgs.srv import BMI, BMIResponse
+from common_msgs.srv import BATTERY, BATTERYResponse
 
 def service_callback(request):
-    response = BMIResponse(bmi=(int)(request.weight / (request.height * requset.height)))
-    print ("request data:", request.weight, request.height, ", response:", response.bmi)
+    response = BATTERYResponse(battery=request.total - request.use)
+    print ("request data:", request.total, request.use, ", response:", response.battery)
     return response
 
-rospy.init_node('BMI_server')
-service = rospy.Service('bmi', BMI, service_callback)
+rospy.init_node('battery_server')
+service = rospy.Service('battery', BATTERY, service_callback)
 rospy.spin()
