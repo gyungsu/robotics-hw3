@@ -3,7 +3,7 @@ import rospy
 from common_msgs.srv import BMI, BMIResponse
 
 def service_callback(request):
-    response = BMIResponse(bmi=request.whight /(request.height * request.height))
+    response = BMIResponse(bmi=request.weight /(request.height * request.height))
     print ("request data:", request.weight, request.height, ", response:", response.bmi)
     return response
 
